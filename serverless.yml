@@ -1,0 +1,38 @@
+service: packaging_test
+
+plugins:
+  - serverless-python-requirements
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: eu-central-1
+  profile: ep2-testaccount
+
+custom:
+  pythonRequirements:
+    IndividuallyMoveUpModules: ${opt:moveup, 'true'}
+
+package:
+  individually: true
+  exclude:
+    - '**/*'
+
+functions:
+  function-one:
+    handler: main.lambda_handler
+    module: ./fn
+    package:
+      include:
+        - 'fn/**'
+  function-one-and-a-half:
+    handler: main.lambda_handler2
+    module: fn
+    package:
+      include:
+        - 'fn/**'
+  function-two:
+    handler: main.handler
+    package:
+      include:
+        - 'main.py'

@@ -1,0 +1,3 @@
+.mypy_cache
+.serverless
+.pytest_cache
