@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "serverless-python-requirements": "file:/home/bweigel/Projects/OSS/serverless-python-requirements/tests/individually/serverless-python-requirements-4.2.5.tgz"
+    "serverless-python-requirements": "^4.2.5"
   }
 }
