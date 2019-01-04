@@ -12,23 +12,15 @@ package:
   individually: true
   exclude:
     - '**/*'
+  include:
+    - 'fn/**'
 
 functions:
   function-one:
     handler: main.handler
-    module: ./fn
-    package:
-      include:
-        - 'fn/**'
-  function-one-and-a-half:
-    handler: main.handler2
     module: fn
-    package:
-      include:
-        - 'fn/**'
+    vendor: ./vendor
   function-two:
     handler: main.handler
-    module: fn2
-    package:
-      include:
-        - 'fn2/**'
+    module: fn
+    vendor: ./vendor2
