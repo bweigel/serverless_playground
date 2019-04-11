@@ -1,0 +1,14 @@
+service: packaging-test # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: python2.7
+  region: eu-central-1
+  deploymentBucket: ep.dev.projects
+
+plugins:
+  - serverless-nodpeloy-plugin
+
+functions:
+  hello:
+    handler: handler.hello

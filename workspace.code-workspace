@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "serverless/Issue_5474"
+		}
+	],
+	"settings": {}
+}
